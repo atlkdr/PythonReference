@@ -55,3 +55,20 @@ com=21+32j # complex(a,b)=com
 # and = & , or = | 
 # xor = ^
 
+# Left Shift by 2 =>  21 << 2
+
+# Divide or multiply fast with powers of 2 
+
+# Concept of alias import math as m
+import math
+# Or from math import sqrt,pow use as pow(3,2)
+
+pow_3=math.pow(3,2)
+print(pow_3)
+x=input("Please Enter Input: ") # Always is str format
+# Conversion int(x)
+print(eval(input("An Expression: ")))
+
+import sys 
+
+string = print(sys.argv[0])
