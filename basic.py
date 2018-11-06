@@ -174,6 +174,37 @@ if(__name__=="__main__"):
 # Proceidal Oriented Programming: Broken into FUnctions and Modules
 # Functional Programming: Functions as Parametes eg:- lambda expression
 
+class Computer:
+    maker="Charles"
+    def __init__(self,cpu,ram):
+        self.cpu=cpu # Instance Variable
+        self.ram=ram
+    def config(self):
+        print("Config RAM:",self.ram," CPU:",self.cpu)
+    def ram_com(self,*list_o):
+        for i in list_o:
+            if self.ram!=i.ram:
+                return False
+        return True
+
+    @classmethod
+    def maker_name(cls):
+        print("Maker is : ",cls.maker)
+
+    @staticmethod
+    def static_met():
+        print("This is A static Methord")
+# Like Class Loader and Heap in java The memory consumed in heap by a Object is dependent on
+# the number of varialbes and size of each variable in the class
+# which is calculated by the constructor
+comp1=Computer("i7","2GB")
+comp2=Computer("i5","2GB")
+comp3=Computer("i3","2GB")
+Computer.maker="Baggage"
+print("RAMS ARE SAME :",comp1.ram_com(comp2,comp3))
+Computer.maker_name()
+Computer.static_met()
+
 
 
 
