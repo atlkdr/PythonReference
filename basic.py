@@ -152,4 +152,28 @@ def my_fac(x):
 
 print(my_fac(3))
 
+# Lambda Function
+f=lambda x,y:x*y
+print(f(2,4))
+f2=lambda x:x%2==0
+
+lx=[1,2,3,4,6,7]
+evens=list(filter(f2,lx))
+new_lx=list(map(lambda x:x+10,evens))
+print(new_lx)
+
+
+def only_when_this_moudule():
+    print("Main Module Of Execution => CHanges if it is imported somewhere else")
+
+if(__name__=="__main__"):
+    only_when_this_moudule()
+
+# Python Supports :
+# Object Oriented Programming:
+# Proceidal Oriented Programming: Broken into FUnctions and Modules
+# Functional Programming: Functions as Parametes eg:- lambda expression
+
+
+
 
