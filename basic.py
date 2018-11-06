@@ -206,5 +206,53 @@ Computer.maker_name()
 Computer.static_met()
 
 
+class Student:
+    def __init__(self,name):
+        self.name=name
+        self.test=[]
+    def update_test(self,subject,marks):
+        (self.test).append(Student.Exam(subject,marks))
 
+    def print_result(self):
+        print("Student Name:",self.name)
+        for i in self.test:
+            print("Subject:",i.subject," Marks:",i.marks)
+    class Exam:
+        def __init__(self,subject,marks):
+            self.marks=marks
+            self.subject=subject
+
+s1=Student("Carles")
+s1.update_test("Maths",90)
+s1.update_test("English",96)
+s1.update_test("Biology",86)
+s1.print_result()
+
+
+# Python has Multiple and Multilevel inheritance
+class A:
+    def __init__(self,val):
+        print("Now Superclass is called")
+    def tech1(self):
+        print("Tech1")
+class B(A):
+
+    def __init__(self,val):
+        print("First This is called")
+        super().__init__(val)
+
+    def tech2(self):
+        print("Tech2")
+
+class C:
+    def tech3(self):
+        print("Tech3")
+
+# FOLLOWS MRO IE: Priority to Function calls and __init__ is given to left one
+
+class D(C,A):
+    pass
+
+b=B(21)
+b.tech1()
 
